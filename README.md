@@ -21,15 +21,12 @@ These commands should create two JSON files `problem1.json` and `problem2.json` 
 
 ## Problem 1
 
-For this problem, you will use the data in `problem1.json` which is a 2D array of shape `(5, 5000)`. The values in each row of the array represent loss values over 5000 steps of training and there are 5 models in total. Using [Plotly.js](https://plotly.com/javascript/), implement a line chart showing the loss curves for all 5 models. The following image approximately depicts what we are expecting.
+For this problem, you will use the data in `problem1.json`. Design and implement a webpage that shows the following three plots using [Plotly.js](https://plotly.com/javascript/):
+1. Using the `losses` array which is of shape `(5, 5000)`, show a line plot that depicts the loss values of 5 models over 5000 steps. So, the plot has 5 lines each corresponding to a row in the array. The X and Y-axes should be labelled "Steps" and "Loss" respectively. Please include a legend that shows the color of the line and the model that line corresponds to.  In addition, implement [smoothing](https://en.wikipedia.org/wiki/Exponential_smoothing) for the line plots with a slider that controls the smoothing factor. Bonus points if the model labels in the legend are (de)selectable; deselecting a label should remove that line from the plot while selecting should show the line. 
+2. Using the `confusion matrices` array which is of shape `(5, 2, 2)`, show a bar plot that depicts the classwise accuracies for these 5 models. Each `2 x 2` array represents the confusion matrix for one model on 2 classes. Please label the classes `Class #1` and `Class #2`. Show the bars of different models in different colors, 5 in total.
+3. Using the `radar_data` array which of shape `(5, 5)`, show a radar chart for 5 models (dim 0) and 5 metrics (dim 1). You may label the metrics `Metric #1` through `Metric #5`.
 
-![A sample plot of loss values for various models](problem1.png)
-
-Note that this is for illustrative purposes only. Please feel free to choose colors and layout decisions as you see fit. We will judge you based on overall look and functionality of the plot, some of the factors are: 
-
-* Properly labeled axes and aesthetically pleasing colors
-* An accurate legend for the models, ideally one where it is possible select/deselect each model
-* Any controls over the look of the plot like smoothing, to improve readability
+You will be judged based on how you layout these plots, how aesthetically pleasing the colors are, the readability of these plots among other factors.
 
 ## Problem 2
 
