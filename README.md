@@ -3,11 +3,11 @@
 ## Important Instructions
 - Please make sure to follow all the steps below to generate the data you need to finish both the questions below.
 - If you are facing any difficulty in the above, raise an issue in this repository.
-- Any submission you make must have a `README.md` that clearly documents all the steps needed to `run` your submission.
+- Any submission you make must have a `README.md` that clearly documents all the steps needed to run your submission.
 
 ## Setup
 
-1. In a python virtual environment running at least python 3.9, install the requirements (`numpy`, `matplotlib`):
+1. In a python virtual environment running at least python 3.9, install the requirements (`numpy`):
     ```bash
     pip install -r requirements.txt
     ```
