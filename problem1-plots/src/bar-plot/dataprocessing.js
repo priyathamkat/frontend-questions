@@ -17,5 +17,17 @@ export function calculateAccuracies(confusionMatrices) {
 }
 
 export function getChartData(confusionMatrices) {
-    
+    const accuracies = calculateAccuracies(confusionMatrices);
+
+    return {
+        labels: ['Class #1', 'Class #2'],
+        datasets: accuracies.map((acc, index) => ({
+            label: `Model ${index + 1}`,
+            data: acc,
+            backgroundColor: [
+                `rgba(${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, 0.6)`,
+                `rgba(${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, 0.6)`
+            ]
+        }))
+    };
 }
