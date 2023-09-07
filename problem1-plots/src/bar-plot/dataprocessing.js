@@ -8,17 +8,23 @@ export function calculateAccuracies(confusionMatrices) {
         let TN = matrix[1][1];
 
         let class1Accuracy = TP / (TP + FN);
+        console.log(class1Accuracy);
         let class2Accuracy = TN / (TN + FP);
+        console.log(class2Accuracy);
 
         accuracies.push([class1Accuracy, class2Accuracy]);
     }
-
+    debugger
+    console.log(accuracies);
+    
     return accuracies;
+
 }
 
 export function getChartData(confusionMatrices) {
+    
     const accuracies = calculateAccuracies(confusionMatrices);
-
+    debugger
     return {
         labels: ['Class #1', 'Class #2'],
         datasets: accuracies.map((acc, index) => ({
